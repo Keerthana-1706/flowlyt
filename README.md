@@ -1,7 +1,7 @@
 # Flowlyt
 
 <p align="center">
-  <img src="assets/dashboard-overview.png" width="900"/>
+  <img src="assets/landing-hero.png" width="900"/>
 </p>
 
 Flowlyt is a personal productivity intelligence application that helps users track focus sessions, manage goals, and understand how their time is spent.
@@ -18,8 +18,6 @@ https://flowlyt.vercel.app
 
 ## Screenshots
 
-### Landing Page
-![Landing](assets/landing-hero.png)
 
 ### Features
 ![Features](assets/landing-features.png)
@@ -34,7 +32,7 @@ https://flowlyt.vercel.app
 ![Goals](assets/goals.png)
 
 ### Activity Log
-![Activity](assets/activity.png)
+![Activity](assets/activity-logs.png)
 
 ---
 
@@ -107,11 +105,7 @@ git clone https://github.com/Keerthana-1706/flowlyt.git
 
 Install dependencies
 
-npm install
-
 Run development server
-
-npm run dev
 
 Open
 
