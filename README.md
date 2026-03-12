@@ -1,7 +1,7 @@
 # Flowlyt
 
 <p align="center">
-  <img src="assets/dashboard.png" width="900"/>
+  <img src="assets/dashboard-overview.png" width="900"/>
 </p>
 
 Flowlyt is a personal productivity intelligence application that helps users track focus sessions, manage goals, and understand how their time is spent.
@@ -25,7 +25,7 @@ https://flowlyt.vercel.app
 ![Features](assets/landing-features.png)
 
 ### Dashboard
-![Dashboard](assets/dashboard.png)
+![Dashboard](assets/dashboard-overview.png)
 
 ### Analytics
 ![Analytics](assets/analytics.png)
@@ -39,7 +39,7 @@ https://flowlyt.vercel.app
 ---
 
 ## Feature Overview
-__________________________________________________________________________________________
+
 |           Feature         |                      Description                            |
 |---------------------------|-------------------------------------------------------------|
 | Focus Session Logging     | Log productivity sessions with title, duration and category |
@@ -50,7 +50,7 @@ ________________________________________________________________________________
 | Category Tracking         | Organize sessions into categories                           |
 | Streak Tracking           | Maintain daily productivity streaks                         |
 | Responsive UI             | Works across multiple screen sizes                          |
-|___________________________|_____________________________________________________________|
+
 
 
 ---
