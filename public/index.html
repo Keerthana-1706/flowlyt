@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowlyt - Personal Productivity Intelligence</title>
+    <meta name="description" content="Track your productivity, manage goals, and understand how you spend your time with Flowlyt.">
+    <meta name="theme-color" content="#0a0e27">
+    
+    <!-- Favicon - Lightning Bolt -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233b82f6'/%3E%3Cstop offset='100%25' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='7' fill='%230f172a'/%3E%3Cpath d='M18 4L10 16h6l-4 12 12-14h-7l5-10z' fill='url(%23g)'/%3E%3C/svg%3E">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landing-container" class="landing-container">
+        <!-- Hero Section -->
+        <section class="landing-hero">
+            <div class="landing-content">
+                <h1 class="hero-title">
+                    <span class="hero-brand">
+                        <span class="flowing-text">Flowlyt</span>
+                    </span>
+                </h1>
+                
+                <p class="hero-tagline">Track. Focus. Achieve.</p>
+                
+                <p class="hero-subtitle">
+                    Transform your productivity with intelligent tracking, visual analytics, and focus insights. 
+                    Build better habits and understand how you spend your time.
+                </p>
+                
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-lg" id="landing-get-started">
+                        <span>Get Started</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                    <button class="btn btn-secondary btn-lg" id="landing-sign-in">Sign In</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section class="landing-features">
+            <div class="landing-content">
+                <div class="section-header">
+                    <h2>Everything you need to stay productive</h2>
+                    <p>Powerful features designed for modern professionals</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <h3>Focus Tracking</h3>
+                        <p>Log and monitor your productivity sessions with detailed time tracking and category management.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon accent">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="6"/>
+                                <circle cx="12" cy="12" r="2"/>
+                            </svg>
+                        </div>
+                        <h3>Goal Progress</h3>
+                        <p>Set meaningful goals and track your progress with visual indicators and deadline management.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon success">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 20V10M12 20V4M6 20v-6"/>
+                            </svg>
+                        </div>
+                        <h3>Productivity Analytics</h3>
+                        <p>Visualize your productivity patterns with beautiful charts and actionable insights over time.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                                <path d="M9 12h6m-6 4h6"/>
+                            </svg>
+                        </div>
+                        <h3>Session Logging</h3>
+                        <p>Capture work sessions instantly with categories, notes, and duration tracking for complete productivity history.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon accent">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"/>
+                            </svg>
+                        </div>
+                        <h3>Productivity Replay</h3>
+                        <p>Review your day with an animated timeline that shows when and how you spent your productive hours.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon success">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                            </svg>
+                        </div>
+                        <h3>Streak Tracking</h3>
+                        <p>Build consistent habits with daily streak tracking that motivates you to maintain momentum.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="landing-cta">
+            <div class="landing-content">
+                <div class="cta-content">
+                    <h2>Start tracking your productivity today</h2>
+                    <p>Build better productivity habits with intelligent tracking and insights</p>
+                    <div class="cta-actions">
+                        <button class="btn btn-primary btn-lg" id="landing-cta-start">
+                            <span>Create Account</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="landing-footer">
+            <div class="landing-content">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <div class="logo logo-dark-blue">
+                            <svg width="90" height="90" viewBox="0 0 100 100" fill="none">
+                                <defs>
+                                    <linearGradient id="footerLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#1e3a5f"/>
+                                        <stop offset="100%" stop-color="#0f1f3a"/>
+                                    </linearGradient>
+                                    <linearGradient id="footerBoltGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#60d5f2"/>
+                                        <stop offset="100%" stop-color="#3b82f6"/>
+                                    </linearGradient>
+                                </defs>
+                                <rect width="100" height="100" rx="22" fill="url(#footerLogoGrad)"/>
+                                <path d="M55 25L35 55h15l-10 20 25-35H50l10-15z" fill="url(#footerBoltGrad)"/>
+                            </svg>
+                        </div>
+                        <span class="footer-title"><span class="flowing-text">Flowlyt</span></span>
+                    </div>
+                    <p class="footer-tagline">Personal Productivity Intelligence</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Auth Container -->
+    <div id="auth-container" class="auth-container hidden">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="logo logo-dark-blue">
+                    <svg width="48" height="48" viewBox="0 0 100 100" fill="none">
+                        <defs>
+                            <linearGradient id="authLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#1e3a5f"/>
+                                <stop offset="100%" stop-color="#0f1f3a"/>
+                            </linearGradient>
+                            <linearGradient id="authBoltGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#60d5f2"/>
+                                <stop offset="100%" stop-color="#3b82f6"/>
+                            </linearGradient>
+                        </defs>
+                        <rect width="100" height="100" rx="22" fill="url(#authLogoGrad)"/>
+                        <path d="M55 25L35 55h15l-10 20 25-35H50l10-15z" fill="url(#authBoltGrad)"/>
+                    </svg>
+                </div>
+                <h1><span class="flowing-text">Flowlyt</span></h1>
+                <p class="auth-subtitle">Personal Productivity Intelligence</p>
+            </div>
+            
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">Sign In</button>
+                <button class="auth-tab" data-tab="signup">Sign Up</button>
+            </div>
+            
+            <!-- Login Form -->
+            <form id="login-form" class="auth-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="name@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Sign In</button>
+                <p class="auth-error" id="login-error"></p>
+            </form>
+            
+            <!-- Signup Form -->
+            <form id="signup-form" class="auth-form hidden">
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" placeholder="name@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" placeholder="Create a password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+                <p class="auth-error" id="signup-error"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- App Container -->
+    <div id="app-container" class="app-container hidden">
+        <!-- Sidebar -->
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+              
+
+                <div class="logo logo-dark-blue">
+    <svg width="43" height="43" viewBox="0 0 100 100" fill="none">
+        <defs>
+            <linearGradient id="sidebarLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#1e3a5f"/>
+                <stop offset="100%" stop-color="#0f1f3a"/>
+            </linearGradient>
+            <linearGradient id="sidebarBoltGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#60d5f2"/>
+                <stop offset="100%" stop-color="#3b82f6"/>
+            </linearGradient>
+        </defs>
+
+        <rect width="100" height="100" rx="22" fill="url(#sidebarLogoGrad)"/>
+        <path d="M55 25L35 55h15l-10 20 25-35H50l10-15z" fill="url(#sidebarBoltGrad)"/>
+    </svg>
+</div>
+                <span class="sidebar-title"><span class="flowing-text">Flowlyt</span></span>
+                <button id="sidebar-toggle" class="sidebar-toggle">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 12h18M3 6h18M3 18h18"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-page="dashboard">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7" rx="1"/>
+                        <rect x="14" y="3" width="7" height="7" rx="1"/>
+                        <rect x="3" y="14" width="7" height="7" rx="1"/>
+                        <rect x="14" y="14" width="7" height="7" rx="1"/>
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item" data-page="goals">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <circle cx="12" cy="12" r="6"/>
+                        <circle cx="12" cy="12" r="2"/>
+                    </svg>
+                    <span>Goals</span>
+                </a>
+                <a href="#" class="nav-item" data-page="activity">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                    </svg>
+                    <span>Activity</span>
+                </a>
+                <a href="#" class="nav-item" data-page="analytics">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 20V10M12 20V4M6 20v-6"/>
+                    </svg>
+                    <span>Analytics</span>
+                </a>
+                <a href="#" class="nav-item" data-page="settings">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+                    </svg>
+                    <span>Settings</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button id="logout-btn" class="nav-item logout">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                        <polyline points="16 17 21 12 16 7"/>
+                        <line x1="21" y1="12" x2="9" y2="12"/>
+                    </svg>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <button id="mobile-menu-btn" class="mobile-menu-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 12h18M3 6h18M3 18h18"/>
+                        </svg>
+                    </button>
+                    <h2 id="page-title">Dashboard</h2>
+                </div>
+                <div class="header-right">
+                    <div class="user-info">
+                        <span id="user-greeting">Welcome back</span>
+                        <div class="user-avatar" id="user-avatar">JD</div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Page -->
+            <section id="dashboard-page" class="page active">
+                <div class="dashboard-grid">
+                    <!-- Stats Cards -->
+                    <div class="stats-row">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <div class="stat-content">
+                                <span class="stat-label">Total Hours</span>
+                                <span class="stat-value" id="total-hours">0h</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon accent">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <circle cx="12" cy="12" r="6"/>
+                                    <circle cx="12" cy="12" r="2"/>
+                                </svg>
+                            </div>
+                            <div class="stat-content">
+                                <span class="stat-label">Goals Completed</span>
+                                <span class="stat-value" id="goals-completed">0</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon success">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                                </svg>
+                            </div>
+                            <div class="stat-content">
+                                <span class="stat-label">Sessions Today</span>
+                                <span class="stat-value" id="sessions-today">0</span>
+                            </div>
+                        </div>
+                        <div class="stat-card streak-card">
+                            <div class="stat-icon streak">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                                </svg>
+                            </div>
+                            <div class="stat-content">
+                                <span class="stat-label">Current Streak</span>
+                                <span class="stat-value" id="current-streak">0 days</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Dashboard Content -->
+                    <div class="dashboard-content">
+                        <!-- Left Column -->
+                        <div class="dashboard-left">
+                            <!-- Quick Log -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3>Quick Log Session</h3>
+                                </div>
+                                <form id="quick-log-form" class="quick-log-form">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label>Session Title</label>
+                                            <input type="text" id="quick-title" placeholder="What did you work on?" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Duration (minutes)</label>
+                                            <input type="number" id="quick-duration" placeholder="30" min="1" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label>Category</label>
+                                            <select id="quick-category">
+                                                <option value="work">Work</option>
+                                                <option value="learning">Learning</option>
+                                                <option value="creative">Creative</option>
+                                                <option value="health">Health</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Log Session</button>
+                                </form>
+                            </div>
+
+                            <!-- Weekly Chart -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3>Weekly Productivity</h3>
+                                </div>
+                                <div class="chart-container">
+                                    <canvas id="weekly-chart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Column -->
+                        <div class="dashboard-right">
+                            <!-- Productivity Insight Card -->
+                            <div class="card insight-card">
+                                <div class="card-header">
+                                    <h3>
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; margin-right: 6px; vertical-align: middle;">
+                                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                                        </svg>
+                                        Productivity Insight
+                                    </h3>
+                                </div>
+                                <div class="insight-content" id="productivity-insight">
+                                    <div class="insight-icon">💡</div>
+                                    <p class="insight-text">Log more sessions to unlock personalized insights about your productivity patterns.</p>
+                                </div>
+                            </div>
+                        
+                            <!-- Activity Timeline -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3>Recent Activity</h3>
+                                    <button id="replay-btn" class="btn btn-secondary btn-sm">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polygon points="5 3 19 12 5 21 5 3"/>
+                                        </svg>
+                                        Replay Timeline
+                                    </button>
+                                </div>
+                                <div id="activity-timeline" class="activity-timeline">
+                                    <div class="empty-state">
+                                        <p>No activity yet. Start logging sessions!</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Goals Overview -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3>Active Goals</h3>
+                                    <button class="btn btn-secondary btn-sm" data-action="view-goals">View All</button>
+                                </div>
+                                <div id="goals-preview" class="goals-preview">
+                                    <div class="empty-state">
+                                        <p>No goals yet. Create your first goal!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Goals Page -->
+            <section id="goals-page" class="page">
+                <div class="page-header">
+                    <h2>Goals</h2>
+                    <button id="add-goal-btn" class="btn btn-primary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"/>
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                        </svg>
+                        Add Goal
+                    </button>
+                </div>
+                <div id="goals-grid" class="goals-grid">
+                    <div class="empty-state-large">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <circle cx="12" cy="12" r="6"/>
+                            <circle cx="12" cy="12" r="2"/>
+                        </svg>
+                        <h3>No Goals Yet</h3>
+                        <p>Create your first goal to start tracking your progress.</p>
+                        <button class="btn btn-primary" id="empty-add-goal-btn">Create Goal</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Activity Page -->
+            <section id="activity-page" class="page">
+                <div class="page-header">
+                    <h2>Activity Log</h2>
+                    <button id="add-session-btn" class="btn btn-primary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"/>
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                        </svg>
+                        Log Session
+                    </button>
+                </div>
+                <div id="sessions-list" class="sessions-list">
+                    <div class="empty-state-large">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                        <h3>No Sessions Logged</h3>
+                        <p>Start tracking your productivity by logging a session.</p>
+                        <button class="btn btn-primary" id="empty-add-session-btn">Log Session</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Analytics Page -->
+            <section id="analytics-page" class="page">
+                <div class="page-header">
+                    <h2>Analytics</h2>
+                </div>
+                <div class="analytics-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Weekly Productivity</h3>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="analytics-weekly-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Category Distribution</h3>
+                        </div>
+                        <div class="chart-container chart-container-sm">
+                            <canvas id="category-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="card full-width">
+                        <div class="card-header">
+                            <h3>Goal Progress</h3>
+                        </div>
+                        <div id="goal-progress-list" class="goal-progress-list">
+                            <div class="empty-state">
+                                <p>No goals to display. Create some goals to see your progress.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Settings Page -->
+            <section id="settings-page" class="page">
+                <div class="page-header">
+                    <h2>Settings</h2>
+                </div>
+                <div class="settings-content">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Profile</h3>
+                        </div>
+                        <form id="profile-form" class="settings-form">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" id="settings-name" placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" id="settings-email" placeholder="Your email" disabled>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </form>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Data Management</h3>
+                        </div>
+                        <div class="settings-actions">
+                            <button id="export-data-btn" class="btn btn-secondary">Export Data</button>
+                            <button id="clear-data-btn" class="btn btn-danger">Clear All Data</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <div id="modal-overlay" class="modal-overlay hidden">
+        <!-- Goal Modal -->
+        <div id="goal-modal" class="modal hidden">
+            <div class="modal-header">
+                <h3 id="goal-modal-title">Add Goal</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <form id="goal-form">
+                <div class="form-group">
+                    <label>Goal Title</label>
+                    <input type="text" id="goal-title" placeholder="e.g., Read 12 books this year" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Target Value</label>
+                        <input type="number" id="goal-target" placeholder="12" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Current Progress</label>
+                        <input type="number" id="goal-progress" placeholder="0" min="0" value="0">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Deadline</label>
+                    <input type="date" id="goal-deadline" required>
+                </div>
+                <input type="hidden" id="goal-id">
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary modal-cancel">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Goal</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Session Modal -->
+        <div id="session-modal" class="modal hidden">
+            <div class="modal-header">
+                <h3>Log Session</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <form id="session-form">
+                <div class="form-group">
+                    <label>Session Title</label>
+                    <input type="text" id="session-title" placeholder="What did you work on?" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Duration (minutes)</label>
+                        <input type="number" id="session-duration" placeholder="30" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select id="session-category">
+                            <option value="work">Work</option>
+                            <option value="learning">Learning</option>
+                            <option value="creative">Creative</option>
+                            <option value="health">Health</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Notes (optional)</label>
+                    <textarea id="session-notes" placeholder="Add any notes..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Date</label>
+                    <input type="date" id="session-date" required>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary modal-cancel">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Log Session</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Replay Modal -->
+        <div id="replay-modal" class="modal modal-lg hidden">
+            <div class="modal-header">
+                <h3>Productivity Replay</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="replay-container">
+                <div class="replay-timeline">
+                    <div class="timeline-header">
+                        <div class="time-markers">
+                            <span>6 AM</span>
+                            <span>9 AM</span>
+                            <span>12 PM</span>
+                            <span>3 PM</span>
+                            <span>6 PM</span>
+                            <span>9 PM</span>
+                        </div>
+                    </div>
+                    <div id="replay-track" class="timeline-track">
+                        <div id="replay-blocks" class="timeline-blocks"></div>
+                    </div>
+                </div>
+                <div class="replay-controls">
+                    <button id="replay-play" class="btn btn-primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="5 3 19 12 5 21 5 3"/>
+                        </svg>
+                        Play
+                    </button>
+                    <button id="replay-pause" class="btn btn-secondary hidden">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="6" y="4" width="4" height="16"/>
+                            <rect x="14" y="4" width="4" height="16"/>
+                        </svg>
+                        Pause
+                    </button>
+                    <button id="replay-reset" class="btn btn-secondary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M1 4v6h6"/>
+                            <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>
+                        </svg>
+                        Reset
+                    </button>
+                </div>
+                <div id="replay-info" class="replay-info">
+                    <p>Select a date and click play to replay your productivity sessions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
