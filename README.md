@@ -1,18 +1,20 @@
 # Flowlyt
 
 <p align="center">
-  <img src="assets/landing-hero.png" width="900"/>
+  <img src="assets/landing-hero.png" width="900" alt="Flowlyt preview"/>
 </p>
 
-Flowlyt is a personal productivity intelligence application that helps users track focus sessions, manage goals, and understand how their time is spent.
+<p align="center">
+  A personal productivity intelligence application for tracking focus sessions, goals, and productivity insights.
+</p>
 
-Instead of just logging time, the application provides visual insights and progress tracking so users can see patterns in their productivity and stay consistent with their goals.
+<p align="center">
+  <a href="https://flowlyt.vercel.app"><strong>Live Demo</strong></a>
+</p>
 
 ---
 
-## Live Demo
-
-https://flowlyt.vercel.app
+## Screenshots
 
 ---
 
