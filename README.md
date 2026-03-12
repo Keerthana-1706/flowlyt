@@ -1,5 +1,11 @@
 # Flowlyt
 
+![Next.js](https://img.shields.io/badge/Next.js-black?logo=nextdotjs)
+![React](https://img.shields.io/badge/React-20232A?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?logo=tailwind-css)
+
+
 <p align="center">
   <img src="assets/landing-hero.png" width="900" alt="Flowlyt preview"/>
 </p>
