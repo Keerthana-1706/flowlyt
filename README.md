@@ -83,15 +83,19 @@ Deployment
 
 Flowlyt follows a modular and scalable structure, separating UI, logic, and data handling for better maintainability.
 
+## 📁 Project Structure
+
+Flowlyt follows a modular and scalable structure, separating UI, logic, and data handling for better maintainability.
+
 flowlyt/
-├── app/                    # Next.js App Router (pages, layouts, routing)
-├── components/             # Reusable UI components
-│   └── ui/                 # UI primitives and reusable components
-├── hooks/                  # Custom React hooks
-├── lib/                    # Utility functions & local data handling
-├── assets/                 # Images, icons, screenshots
-├── styles/                 # Global styles and Tailwind configuration
-├── public/                 # Static public files
+├── app/                     – Next.js App Router (pages, layouts, routing)
+├── components/              – Reusable UI components
+│   └── ui/                  – UI primitives and reusable components
+├── hooks/                   – Custom React hooks
+├── lib/                     – Utility functions & local data handling
+├── assets/                  – Images, icons, screenshots
+├── styles/                  – Global styles and Tailwind configuration
+├── public/                  – Static public files
 ├── package.json
 ├── next.config.mjs
 └── README.md
