@@ -1,4 +1,4 @@
-<img width="380" height="140" alt="image" src="https://github.com/user-attachments/assets/3ab030e1-9503-421d-bf61-68a633bd6ba4" /># ⚡ Flowlyt
+# ⚡ Flowlyt
 
 ![Next.js](https://img.shields.io/badge/Next.js-black?logo=nextdotjs)
 ![React](https://img.shields.io/badge/React-20232A?logo=react)
