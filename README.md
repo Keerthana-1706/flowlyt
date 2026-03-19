@@ -81,21 +81,21 @@ Deployment
 
 ## Project Structure
 
-flowlyt  
-├── app  
-├── components  
-├── public  
-├── styles  
-├── assets  
-│ ├── landing-hero.png  
-│ ├── landing-features.png  
-│ ├── dashboard.png  
-│ ├── analytics.png  
-│ ├── goals.png  
-│ └── activity.png  
-├── package.json  
-├── next.config.mjs  
-└── README.md  
+Flowlyt follows a modular and scalable structure, separating UI, logic, and data handling for better maintainability.
+
+
+flowlyt/
+├── app/                     # Next.js App Router (pages, layouts, routing)
+├── components/             # Reusable UI components
+│   └── ui/                 # Design system components (buttons, modals, charts, etc.)
+├── hooks/                  # Custom React hooks
+├── lib/                    # Utility functions & local data handling (LocalStorage logic)
+├── assets/                 # Static assets (images, icons, screenshots)
+├── styles/                 # Global styles and Tailwind configuration
+├── public/                 # Static public files
+├── package.json
+├── next.config.mjs
+└── README.md
 
 ---
 
