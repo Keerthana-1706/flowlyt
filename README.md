@@ -10,7 +10,7 @@
   <img src="assets/landing-hero.png" width="900" alt="Flowlyt preview"/>
 </p>
 
-Flowlyt is a personal productivity intelligence application that helps users track focus sessions, manage goals, and understand how their time is spent.
+Flowlyt is a personal productivity intelligence dashboard that helps users track focus sessions, manage goals, and understand how their time is spent.
 
 Instead of just logging time, the application provides visual insights and progress tracking so users can see patterns in their productivity and stay consistent with their goals.
 
