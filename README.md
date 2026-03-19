@@ -1,4 +1,4 @@
-# ⚡ Flowlyt
+<img width="380" height="140" alt="image" src="https://github.com/user-attachments/assets/3ab030e1-9503-421d-bf61-68a633bd6ba4" /># ⚡ Flowlyt
 
 ![Next.js](https://img.shields.io/badge/Next.js-black?logo=nextdotjs)
 ![React](https://img.shields.io/badge/React-20232A?logo=react)
@@ -12,7 +12,7 @@
 
 Flowlyt is a personal productivity intelligence dashboard that helps users track focus sessions, manage goals, and understand how their time is spent.
 
-Instead of just logging time, the application provides visual insights and progress tracking so users can see patterns in their productivity and stay consistent with their goals.
+Instead of just logging time, the platform provides visual insights and progress tracking so users can see patterns in their productivity and stay consistent with their goals.
 
 <p align="center">
   <a href="https://flowlyt.vercel.app"><strong>Live Demo</strong></a>
